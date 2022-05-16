@@ -1,10 +1,13 @@
 import { useState } from 'react'
 
 export const AddTodoList = ({ onAddTodoList }) => {
+  
   const [inputValue, setInputValue] = useState('')
+
   const onHandelChangeInputValue = (event) => {
     setInputValue(event.target.value)
   }
+
   const onClickBtnAddTodo = () => {
     onAddTodoList(inputValue)
     setInputValue('')
